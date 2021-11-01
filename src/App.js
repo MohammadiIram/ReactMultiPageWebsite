@@ -1,15 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Footer, Home, About, Contact } from "./components";
+import { Navigation, Footer,  Events, Courses,Login , CampusLeader , SpecialOffers } from "./components";
+// import SpecialOffers from "./components/SpecialOffers";
 function App() {
   return (
     <div className="App">
       <Router>
         <Navigation />
         <Switch>
-          <Route path="/" exact component={() => <Home />} />
-          <Route path="/about" exact component={() => <About />} />
-          <Route path="/contact" exact component={() => <Contact />} />
+        <Route path="/SpecialOffers" exact component={() => <SpecialOffers/>} />
+          <Route path="/CampusLeader" exact component={() => <CampusLeader/>} />
+          <Route path="/Events" exact component={() => <Events/>} />
+          <Route path="/courses" exact component={() => <Courses />} />
+          <Route path="/Login" exact component={() => <Login />} />
+
         </Switch>
         <Footer />
       </Router>
